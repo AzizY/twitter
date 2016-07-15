@@ -1,4 +1,7 @@
 class TweetsController < ApplicationController
+  def giris
+
+  end
   def index
     @tweets = Tweet.all
   end

@@ -1,13 +1,16 @@
-<h1>Your Tweets</h1><br>
+<div id="tweet">
+
+<br><i class="fa fa-twitter fa-4x" aria-hidden="true"> Your Tweets </i>
 
 
-<table>
+ <br><br><br> <table class="table table-hover">
 
   <% @tweets.each do |tweet| %>
       <tr>
         <td><%= tweet.content %></td>
 
-        <td><%= link_to 'Show', tweet_path(tweet) %></td>
+        <td><%= link_to  'Show', tweet_path(tweet) %></td>
+
         <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
         <td><%= link_to 'Destroy', tweet_path(tweet),
                         method: :delete,
@@ -15,5 +18,9 @@
       </tr>
   <% end %>
 </table><br>
+  <%= link_to 'New tweet', new_tweet_path,  class: 'btn btn-default'%><br><br>
 
-<%= link_to 'New tweet', new_tweet_path %>
+  <i class="fa fa-camera-retro"></i>
+
+
+  </div>
