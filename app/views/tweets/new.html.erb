@@ -1,0 +1,17 @@
+<h> New Tweet</h>
+
+
+<%= form_for @tweet do |f| %>
+
+    <p>
+      <%= f.text_field :content %>
+    </p>
+    <p>
+      <%= f.button :tweet %>
+    </p>
+
+
+
+<% end %>
+
+<%= link_to 'Tweets', tweets_path %>
