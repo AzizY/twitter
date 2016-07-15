@@ -1,3 +1,5 @@
+<div id="panel" class="panel panel-default">
+  <div class="panel-body">
 <div id="tweet">
 
 <br><i class="fa fa-twitter fa-4x" aria-hidden="true"> Your Tweets </i>
@@ -6,8 +8,9 @@
  <br><br><br> <table class="table table-hover">
 
   <% @tweets.each do |tweet| %>
+
       <tr>
-        <td><%= tweet.content %></td>
+        <td><%= tweet.content %> <p class="time"><%= tweet.created_at %></p> </td>
 
         <td><%= link_to  'Show', tweet_path(tweet) %></td>
 
@@ -24,3 +27,6 @@
 
 
   </div>
+</div>
+</div>
+
