@@ -1,32 +1,28 @@
-<div id="panel" class="panel panel-default">
-  <div class="panel-body">
+
 <div id="tweet">
 
-<br><i class="fa fa-twitter fa-4x" aria-hidden="true"> Your Tweets </i>
-
-
- <br><br><br> <table class="table table-hover">
+ <br> <table class="table table-hover">
 
   <% @tweets.each do |tweet| %>
 
+      <tr><td><strong><%= tweet.username %></strong></td></tr>
       <tr>
+
         <td><%= tweet.content %> <p class="time"><%= tweet.created_at %></p> </td>
 
         <td><%= link_to  'Show', tweet_path(tweet) %></td>
 
         <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-        <td><%= link_to 'Destroy', tweet_path(tweet),
+        <td><%= link_to 'Delete', tweet_path(tweet),
                         method: :delete,
                         data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
 </table><br>
-  <%= link_to 'New tweet', new_tweet_path,  class: 'btn btn-default'%><br><br>
 
-  <i class="fa fa-camera-retro"></i>
+
 
 
   </div>
-</div>
-</div>
+
 

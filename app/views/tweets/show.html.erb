@@ -1,5 +1,4 @@
-<div id="panel" class="panel panel-default">
-  <div class="panel-body">
+<div id="show">
 <p>
   <strong>Tweet:</strong>
   <%= @tweet.content %>
@@ -24,13 +23,13 @@
 </p>
 <h2>Add a comment:</h2>
 <%= form_for([@tweet, @tweet.comments.build]) do |f| %>
-    <p>
-      <%= f.label :commenter %>
+    <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <%= f.label :User%>
       <%= f.text_field :commenter %>
     </p>
     <p>
-      <%= f.label :body %>
-      <%= f.text_area :body %>
+      <%= f.label :Comment  %>
+      <%= f.text_field :body, size: 70%>
     </p>
     <p>
       <%= f.submit %>
@@ -38,5 +37,5 @@
 <% end %>
 
 <%= link_to 'Tweets', tweets_path %>
-</div>
+
 </div>

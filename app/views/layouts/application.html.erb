@@ -26,30 +26,30 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="http://localhost:3000/tweets">Your Tweets <span class="sr-only"></span></a></li>
+        <li class="active"><a href="http://localhost:3000/tweets">Twitter <span class="sr-only"></span></a></li>
+        <li class="active"><a href="http://localhost:3000/tweets/profile">Profile <span class="sr-only"></span></a></li>
+        <li class="active"><a href="http://localhost:3000/tweets/new">New Tweet <span class="sr-only"></span></a></li>
 
       </ul>
 
       <p class="navbar-text pull-right">
         <% if user_signed_in? %>
-            <strong><%= current_user.email %></strong>.
+            <strong><%= current_user.username %></strong>.
             <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
         <% else %>
             <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-            <div class="panel panel-default">
-              <div class="panel-body">
+
                 <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 
-              </div>
-            </div>
+
         <% end %>
         </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 <div class="container-fluid">
-  <%= image_tag "bg.jpg" %>
+  <%= image_tag "beyaz.jpeg" %>
 </div>
 
 <% if notice %>
